@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+        
+    <com.esri.android.map.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </com.esri.android.map.MapView>
+    <RelativeLayout
+	    android:id="@+id/topbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ff07a7fd">
+	
+       	<TextView
+	        android:id="@+id/wether_report"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:padding="10dip"
+	        android:text="环境预警"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#fff" />
+        
+	    <TextView
+	        android:id="@+id/current_user"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:padding="10dip"
+	        android:text="当前用户"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dip"
+	        android:textColor="#fff" />
+<!-- 
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="30dip"
+	        android:layout_height="30dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_centerHorizontal="true"
+	        android:layout_toLeftOf="@+id/current_user"
+	        android:src="@drawable/usericon" />
+-->
+    </RelativeLayout>
+    
+    <RelativeLayout
+	    android:id="@+id/sysinfo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/topbar"
+	    android:background="#aaa">
+	    
+     <TextView
+	        android:id="@+id/infotext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:textStyle="italic|bold"
+	        android:padding="5dip"
+	        android:layout_marginLeft="5dip"
+	        android:text="公告：水面保洁巡查系统正在内部测试。"
+	        android:textColor="#000" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+	    android:id="@+id/locationinfo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/sysinfo"
+	    android:layout_marginTop="5dip"
+	    android:paddingLeft="10dip"
+	    android:paddingRight="10dip"
+	    android:layout_marginRight="50dip"
+	    android:layout_marginLeft="50dip"
+	    android:background="#0fff">
+    
+     	<TextView
+	        android:id="@+id/ltext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:padding="5dip"
+	        android:layout_marginLeft="5dip"
+	        android:text="所在地点"
+	        android:textColor="#000" />
+
+     	<EditText
+     	    android:id="@+id/NLocation"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="25dp"
+     	    android:layout_marginTop="2dp"
+     	    android:layout_toRightOf="@+id/ltext"
+     	    android:textSize="14sp"
+     	    android:layout_centerHorizontal="true"
+			android:focusable="false"
+			android:singleLine="true"
+			android:paddingLeft="5dip"
+			android:paddingRight="2dip"
+        	android:inputType="text"
+        	android:hint="N:30.300000"
+        	android:background="@drawable/background_edittext"    
+        	   	    
+			/>
+     	<EditText
+     	    android:id="@+id/ELocation"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="25dp"
+     	    android:layout_marginTop="2dp"
+     	    android:layout_toRightOf="@+id/NLocation"
+     	    android:layout_marginLeft="10dip"
+     	    android:layout_centerHorizontal="true"
+			android:paddingLeft="5dip"
+			android:paddingRight="2dip"
+     	   	android:textSize="14sp"
+			android:focusable="false"
+			android:singleLine="true"
+        	android:inputType="text"
+        	android:hint="E:120.200000" 
+        	android:background="@drawable/background_edittext"    
+			/>
+     	
+    </RelativeLayout>
+    
+    <RelativeLayout
+	    android:id="@+id/listview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="120dip"
+	    android:orientation="vertical"
+	    android:background="#fff">
+	    <TextView
+	        android:id="@+id/onlinetxt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:paddingTop="2dip"
+	        android:textStyle="italic|bold"
+	        android:text="在线人员"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	    <ListView
+	        android:id="@+id/lv"
+	        android:divider="@null"
+	        android:layout_below="@+id/onlinetxt"
+	        android:layout_width="120dip"
+	        android:layout_height="150dip"
+	        android:background="@drawable/background_listview"
+	        >
+	    </ListView>
+	   	
+	   	<TextView
+	        android:id="@+id/offlinetxt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:paddingTop="2dip"
+	        android:textStyle="italic|bold"
+	        android:text="离线人员"
+	        android:layout_below="@+id/lv"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	   	
+	   	<ListView
+	        android:id="@+id/offlinelv"
+	        android:divider="@null"
+	        android:layout_below="@+id/offlinetxt"
+	        android:layout_width="120dip"
+	        android:layout_height="150dip"
+	        android:background="@drawable/background_listview"
+	        >
+	    </ListView>
+	</RelativeLayout>
+	
+            <Button
+	      	android:id="@+id/expand_close"
+	      	android:layout_below="@+id/listview"
+	      	android:layout_width="wrap_content"
+	      	android:layout_height="wrap_content"
+	      	android:text="折叠"
+	      	android:padding="10dip"
+	      	android:textColor="#fff"
+	      	android:layout_marginTop="5dip"
+	      	android:layout_alignParentRight="true"
+	      	android:layout_marginRight="2dip"
+	      	android:background="@drawable/background_btn"
+	      	/>
+    
+     <RelativeLayout
+	    android:id="@+id/footerbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dip"
+	    android:background="#fffdfdfd"
+	    android:layout_alignParentBottom="true"
+	   	android:gravity="center_vertical"
+	     >
+         <TextView
+	        android:id="@+id/cptag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:text="Copyright©2014 qtj.com.cn All Rights Reserved"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	 </RelativeLayout>
+         <!-- 登录button -->
+        <Button
+	      	android:id="@+id/upload"
+	      	android:layout_above="@+id/footerbar"
+	      	android:layout_width="wrap_content"
+	      	android:layout_height="wrap_content"
+	      	android:text="信息上传"
+	      	android:padding="10dip"
+	      	android:textColor="#fff"
+	      	android:layout_marginBottom="5dip"
+	      	android:layout_alignParentRight="true"
+	      	android:layout_marginRight="2dip"
+	      	android:background="@drawable/background_btn"
+	      	/>
+        <Button
+	      	android:id="@+id/infosettingbtn"
+	      	android:layout_above="@+id/footerbar"
+	      	android:layout_width="35dip"
+	        android:layout_height="35dip"
+	      	android:layout_marginLeft="10dip"
+	      	android:layout_marginBottom="5dip"
+	      	android:layout_alignParentLeft="true"
+	      	android:background="@drawable/ic_infosettingbtn"
+	      	/>
+        <Button
+	      	android:id="@+id/center_map"
+	      	android:layout_above="@+id/footerbar"
+	      	android:layout_toRightOf="@+id/infosettingbtn"
+	      	android:layout_width="35dip"
+	        android:layout_height="35dip"
+	      	android:layout_marginLeft="10dip"
+	      	android:layout_marginBottom="5dip"
+	      	android:background="@drawable/ic_launcher"
+	      	/>
+
+</RelativeLayout>

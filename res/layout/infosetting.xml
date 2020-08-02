@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee">
+    <!-- padding 内边距   layout_margin 外边距
+     android:layout_alignParentTop 布局的位置是否处于顶部 -->
+       <RelativeLayout
+	    android:id="@+id/topbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ff07a7fd">
+		<ImageView
+	        android:id="@+id/backbtn"
+	        android:layout_width="35dip"
+	        android:layout_height="35dip"
+	        android:layout_marginTop="5dip"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="2dip"
+	        android:src="@drawable/backicon" />
+	    <TextView
+	        android:id="@+id/current_user"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:padding="10dip"
+	        android:text="信息和设置"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#fff" />
+    </RelativeLayout>
+    
+  	<RelativeLayout
+  	    android:id="@+id/login_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@+id/topbar"
+  		android:padding="15dip"
+    	android:layout_margin="15dip"
+    	android:background="#eee" >
+  		<!-- 账号 -->
+    	<TextView
+        android:id="@+id/version_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#FF555555"
+        android:text="当前版本：V2.2.1"
+        />
+       
+    	<Button
+	      	android:id="@+id/logout"
+	      	android:layout_below="@+id/version_num"
+	      	android:layout_width="wrap_content"
+	      	android:layout_height="wrap_content"
+	      	android:text="退出登陆"
+	      	android:padding="10dip"
+	      	android:textColor="#fff"
+	      	android:layout_marginTop="50dip"
+	      	android:layout_centerInParent="true"
+	      	android:layout_marginRight="2dip"
+	      	android:background="@drawable/background_btn"
+	      	/>
+        
+  	</RelativeLayout>
+    
+     <RelativeLayout
+	    android:id="@+id/footerbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dip"
+	    android:background="#fffdfdfd"
+	    android:layout_alignParentBottom="true"
+	   	android:gravity="center_vertical"
+	     >
+	    
+         <TextView
+	        android:id="@+id/appnametag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:paddingTop="10dip"
+	        android:textStyle="italic|bold"
+	        android:text="水面保洁巡查系统"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+         <TextView
+	        android:id="@+id/cptag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:paddingBottom="10dip"
+	        android:text="Copyright©2014 qtj.com.cn All Rights Reserved"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	 </RelativeLayout>
+  
+</RelativeLayout>

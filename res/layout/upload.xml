@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:background="#eee">
+
+   <RelativeLayout
+	    android:id="@+id/topbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ff07a7fd">
+		<ImageView
+	        android:id="@+id/backbtn"
+	        android:layout_width="35dip"
+	        android:layout_height="35dip"
+	        android:layout_marginTop="5dip"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="2dip"
+	        android:src="@drawable/backicon" />
+	    <TextView
+	        android:id="@+id/current_user"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:padding="10dip"
+	        android:text="信息上传"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#fff" />
+
+
+    </RelativeLayout>
+   <RelativeLayout
+	    android:id="@+id/sysinfo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/topbar"
+	    android:background="#aaa">
+	    
+     <TextView
+	        android:id="@+id/infotext"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:textStyle="italic|bold"
+	        android:padding="5dip"
+	        android:layout_marginLeft="5dip"
+	        android:text="公告：水面保洁巡查系统正在内部测试。"
+	        android:textColor="#000" />
+        
+    </RelativeLayout>
+    <RelativeLayout
+  	    android:id="@+id/posinfo_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:padding="10dip"
+    	android:layout_margin="10dip"
+    	android:layout_below="@+id/sysinfo"
+    	android:background="@drawable/background_uploadimg_div" >
+    	
+    	<TextView
+    	    android:id="@+id/textView1"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dip"
+    	    android:layout_alignParentTop="true"
+    	    android:text="@string/position"
+    	    android:textAppearance="?android:attr/textAppearanceMedium"
+    	    android:textColor="#FF555555" />
+    	
+    	<!-- 
+    	    <com.esri.android.map.MapView
+		        android:id="@+id/map_location"
+		        android:layout_marginLeft="10dip"
+		        android:layout_marginRight="10dip"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_centerInParent="true"
+		        android:layout_below="@+id/textView1" >
+    		</com.esri.android.map.MapView>
+    		-->
+        <EditText
+     	    android:id="@+id/NLocation"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="25dp"
+     	    android:layout_marginTop="2dp"
+     	    android:layout_toRightOf="@+id/textView1"
+     	    android:textSize="14sp"
+     	    android:layout_centerHorizontal="true"
+			android:focusable="false"
+			android:singleLine="true"
+			android:layout_marginLeft="20dip"
+			android:paddingLeft="5dip"
+			android:paddingRight="2dip"
+        	android:inputType="text"
+        	android:hint="N：30.300000"
+        	android:background="@drawable/background_edittext"    
+        	   	    
+			/>
+     	<EditText
+     	    android:id="@+id/ELocation"
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="25dp"
+     	    android:layout_marginTop="2dp"
+     	    android:layout_toRightOf="@+id/NLocation"
+     	    android:layout_marginLeft="10dip"
+     	    android:layout_centerHorizontal="true"
+			android:paddingLeft="5dip"
+			android:paddingRight="2dip"
+     	   	android:textSize="14sp"
+			android:focusable="false"
+			android:singleLine="true"
+        	android:inputType="text"
+        	android:hint="E：120.200000" 
+        	android:background="@drawable/background_edittext"    
+			/>
+     	
+     	<!-- 
+	    <TextView
+	        android:id="@+id/longitudeTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginTop="5dip"
+	        android:layout_below="@+id/textView1"
+	        android:textColor="#FF000000"
+	        android:paddingLeft="20dip"
+	        android:text="@string/longitude" />
+	
+	    <TextView
+	        android:id="@+id/latitudeTextView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textView1"
+	       	android:layout_alignParentRight="true"
+	        android:paddingRight="20dip"
+	        android:layout_marginTop="5dip"
+	        android:textColor="#FF000000"
+	        android:text="@string/latitude" />
+	        -->
+    </RelativeLayout>
+        
+	<RelativeLayout
+  	    android:id="@+id/imglist_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:padding="10dip"
+    	android:layout_margin="10dip"
+    	android:layout_below="@+id/posinfo_div"
+    	android:background="@drawable/background_uploadimg_div" >
+
+	   	<TextView
+	   	    android:id="@+id/posimage"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_alignParentTop="true"
+		    android:layout_marginLeft="10dip"
+	   	    android:layout_marginBottom="5dip"
+	   	    android:text="@string/pos_image"
+	   	    android:textAppearance="?android:attr/textAppearanceMedium"
+	   	    android:textColor="#FF555555" />
+	   	
+	   	<HorizontalScrollView  
+	        android:id="@+id/hsv"
+	        android:layout_below="@+id/posimage"
+	        android:layout_width="fill_parent"  
+	        android:layout_marginLeft="10dip"
+	        android:layout_marginRight="10dip"
+	        android:layout_height="wrap_content"  
+	        android:scrollbars="none" >  
+  
+	        <com.iniwap.whereisboat.HSVLayout  
+	            android:id="@+id/hsvLayout"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"
+	            />  
+    	</HorizontalScrollView>  
+	<!-- 	
+	    <Button
+	        android:id="@+id/button2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/posimage"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/addimg" />
+
+	    <Button
+	        android:id="@+id/button3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/button2"
+	        android:layout_alignBottom="@+id/button2"
+	        android:layout_marginRight="24dp"
+	        android:layout_toLeftOf="@+id/posimage"
+	        android:text="@string/addimg" />
+
+	    <Button
+	        android:id="@+id/button1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/posimage"
+	        android:layout_marginLeft="21dp"
+	        android:layout_toRightOf="@+id/posimage"
+	        android:text="@string/addimg" />
+-->
+
+	</RelativeLayout>
+
+	<RelativeLayout
+  	    android:id="@+id/imgdes_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:padding="10dip"
+    	android:layout_margin="10dip"
+    	android:layout_below="@+id/imglist_div"
+    	android:background="@drawable/background_uploadimg_div" >
+
+	    <TextView
+	        android:id="@+id/textView4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dip"
+	        android:text="@string/description"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#FF555555" />
+	    
+	    <EditText
+	        android:id="@+id/edittext"
+	        android:layout_below="@+id/textView4"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:singleLine="false"
+			android:gravity="left|top"
+		    android:lines="4"
+		    android:inputType="textMultiLine"
+		    android:layout_marginTop="5dip"
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip" />
+	    
+	    <Button
+	        android:id="@+id/cancelbtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/edittext"
+	        android:layout_alignRight="@+id/edittext"
+	        android:layout_marginTop="5dp"
+	       	android:paddingLeft="20dip"
+	       	android:paddingRight="20dip"
+	       	android:layout_marginRight="20dp"
+	      	android:background="@drawable/background_btn"
+	        android:text="@string/cancel"
+	        android:textColor="#fff"  />
+	   	<Button
+	        android:id="@+id/postbtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/edittext"
+	        android:layout_alignLeft="@+id/edittext"
+	        android:layout_marginTop="5dp"
+	       	android:layout_marginLeft="20dp"
+	       	android:paddingLeft="20dip"
+	       	android:paddingRight="20dip"
+	      	android:background="@drawable/background_btn"
+	        android:text="@string/post"
+	        android:textColor="#fff" />
+
+	</RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/footerbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dip"
+	    android:background="#fffdfdfd"
+	    android:layout_alignParentBottom="true"
+	   	android:gravity="center_vertical"
+	     >
+	    
+         <TextView
+	        android:id="@+id/appnametag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:paddingTop="10dip"
+	        android:textStyle="italic|bold"
+	        android:text="水面保洁巡查系统"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+         <TextView
+	        android:id="@+id/cptag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:paddingBottom="10dip"
+	        android:text="Copyright©2014 qtj.com.cn All Rights Reserved"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	 </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eee">
+    <!-- padding 内边距   layout_margin 外边距
+     android:layout_alignParentTop 布局的位置是否处于顶部 -->
+    
+  	<RelativeLayout
+  	    android:id="@+id/login_div"
+  	    android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:padding="15dip"
+    	android:layout_margin="15dip"
+    	android:background="@drawable/background_login_div" >
+  		<!-- 账号 -->
+    	<TextView
+        android:id="@+id/login_user_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp"
+        android:textColor="#FF555555"
+        android:text="@string/user_name"
+        />
+    	
+    	
+    	<EditText
+        android:id="@+id/usernameinupt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name_hint"
+        android:layout_below="@id/login_user_input"
+        android:singleLine="true"
+        android:inputType="text"/>
+    	
+        <!-- 密码 text -->
+        <TextView
+      	android:id="@+id/login_password_input"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@id/usernameinupt"
+      	android:layout_marginTop="3dp"
+      	android:layout_marginBottom="3dp"
+      	android:textColor="#FF555555"
+      	android:text="@string/pass_word"/>
+        <EditText
+      	android:id="@+id/pwdinput"
+      	android:layout_width="fill_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@id/login_password_input"
+      	android:hint="@string/pass_word_hint"
+      	android:inputType="textPassword"
+      	android:singleLine="true" />
+        
+        <!-- 登录button -->
+        <Button
+	      	android:id="@+id/login"
+	      	android:layout_width="wrap_content"
+	      	android:layout_height="wrap_content"
+	      	android:layout_below="@id/pwdinput"
+	      	android:layout_alignRight="@id/pwdinput"
+	      	android:text="@string/log_in"
+	      	android:textColor="#fff"
+	      	android:padding="10dip"
+	      	android:background="@drawable/background_btn"
+	      	/>
+		<!-- 重置button -->
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/login"
+            android:layout_alignBottom="@+id/login"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@+id/login"
+            android:textColor="#fff"
+            android:text="@string/reset"
+            android:padding="10dip"
+	      	android:background="@drawable/background_btn"
+            />
+        
+        <ImageView
+            android:id="@+id/act_btn" 
+            android:src="@drawable/account_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:layout_above="@+id/login_password_input"
+            android:layout_alignRight="@+id/usernameinupt"
+	        android:paddingBottom="8dp"
+	        android:visibility="invisible"/>
+       
+        
+  	</RelativeLayout>
+    
+     <RelativeLayout
+	    android:id="@+id/footerbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dip"
+	    android:background="#fffdfdfd"
+	    android:layout_alignParentBottom="true"
+	   	android:gravity="center_vertical"
+	     >
+	    
+         <TextView
+	        android:id="@+id/appnametag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:paddingTop="10dip"
+	        android:textStyle="italic|bold"
+	        android:text="水面保洁巡查系统"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+         <TextView
+	        android:id="@+id/cptag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:paddingBottom="10dip"
+	        android:text="Copyright©2014 qtj.com.cn All Rights Reserved"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#ffaaaaaa" />
+	 </RelativeLayout>
+  	
+  
+</RelativeLayout>

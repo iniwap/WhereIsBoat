@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="app_name">水面保洁巡查系统</string>
+    <string name="user_name">用户名</string>
+    <string name="pass_word">密码</string>
+    <string name="user_name_hint">请输入用户名(2-15个字符)</string>
+    <string name="pass_word_hint">请输入密码(2-15个字符)</string>
+    <string name="log_in">登录</string>
+    <string name="reset">重置</string>
+    <string name="expand_list">展开管理界面</string>
+    <string name="close_list">关闭管理界面</string>
+    <string name="getting_data">数据加载中...</string>
+    <string name="upload_image">上传图像</string>
+    <string name="clear_route">清除轨迹</string>
+    
+    <string name="time">选择时间</string>
+    <string name="position1">选择地点</string>
+    
+    <string name="position">所在地点</string>
+    <string name="pos_image">现场照片</string>
+    <string name="longitude">经度</string>
+    <string name="latitude">纬度</string>
+    <string name="description">备注</string>
+    
+    <string name="post">确认上传</string>
+    <string name="cancel">取消上传</string>
+
+    <string name="picdes">图片</string>
+    <string name="takephoto">拍照</string>
+    <string name="pickphoto">相册</string>
+    <string name="selectphototitle">请选择照片</string>
+    
+    <string name="textdes">请在这里输入描述</string>
+    
+    <string name="addimg">添加照片</string>
+    <string name="deleteimg">清除照片</string>
+    
+    <string name="copyright">©船在哪    版权所有</string>
+    
+</resources>
